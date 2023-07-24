@@ -10,6 +10,7 @@ public class Spring6RestMvcApplication {
 
         SpringApplication.run(Spring6RestMvcApplication.class, args);
         System.out.println("Lombok project");
+        //test
     }
 
 }
