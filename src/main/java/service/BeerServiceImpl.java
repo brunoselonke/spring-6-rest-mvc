@@ -1,17 +1,21 @@
 package service;
 
+import lombok.extern.slf4j.Slf4j;
 import model.Beer;
 import model.BeerStyle;
-import org.springframework.cglib.core.Local;
-
+import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Slf4j
+@Service
 public class BeerServiceImpl implements BeerService {
     @Override
     public Beer getBeerByID(UUID id) {
+
+        log.debug("Get Beer by ID - in service" + id.toString());
+
         return Beer.builder()
                 .id(id)
                 .version(1)
