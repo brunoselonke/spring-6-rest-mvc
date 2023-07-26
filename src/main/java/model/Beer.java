@@ -1,11 +1,13 @@
 package model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Builder
 @Data //creates getters, setters, Required args constructor , to string, equals and hashcode
 public class Beer {
     private UUID id;
